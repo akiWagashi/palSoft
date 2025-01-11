@@ -8,7 +8,6 @@
 #include "palUtils.h"
 #include "palDefine.h"
 
-//C++17的filesystem不是很方便，所以没用
 std::forward_list<std::string> getDirFiles(char const* source, char const* filter)
 {
 	std::forward_list<std::string> files;

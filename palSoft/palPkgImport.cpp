@@ -129,7 +129,7 @@ bool palPackageCreate(char const* const source, char const* const createPackage,
 	fseek(archive, sizeof(palArchiveHeader::magicNumber), SEEK_SET);
 	fwrite(&entryCount, 4, 1, archive);
 
-	if (checkSumSwitch) checkSum += checkSumCalc((uint8_t*)entryCount, sizeof(entryCount));
+	if (checkSumSwitch) checkSum += checkSumCalc((uint8_t*)&entryCount, sizeof(entryCount));
 
 	fwrite(charIndex, sizeof(charIndex), 1, archive);
 

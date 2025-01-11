@@ -1,6 +1,8 @@
 ﻿#ifndef PAL_FUNCTION_H
 #define PAL_FUNCTION_H
 
+#include <string>
+
 /**
  * @brief 导出封包文件到指定目录
  * @param targetArchivec
@@ -8,7 +10,7 @@
  * @param dataFileDecrypt
  * @return 执行结果
 */
-bool palPackgeExtract(char const* const targetArchive, char const* const extractPath);
+bool palPackgeExtract(const std::string_view& targetArchive,const std::string_view& extractPath);
 
 /**
  * @brief 创建一个新的封包到指定目录
